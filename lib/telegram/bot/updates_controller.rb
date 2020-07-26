@@ -209,7 +209,7 @@ module Telegram
       end
 
       def action_for_poll_answer
-        [payload_type, [payload['poll_id'], payload['option_ids']]]
+        [payload_type, [payload['poll_id'], payload['option_ids'], payload['user']]]
       end
 
       # Silently ignore unsupported messages to not fail when user crafts
